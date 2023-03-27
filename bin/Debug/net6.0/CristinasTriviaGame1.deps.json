@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "CristinasTriviaGame1/1.0.0": {
+        "runtime": {
+          "CristinasTriviaGame1.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "CristinasTriviaGame1/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
