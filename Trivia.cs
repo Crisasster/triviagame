@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static System.Console; 
-
+using static System.Console;
 namespace CristinasTriviaGame1
 {
      class Trivia
@@ -26,6 +25,17 @@ namespace CristinasTriviaGame1
             string playerAnswer = ReadLine();
             WriteLine("You answered " + playerAnswer);
             WriteLine("The correct answer was: " + Answer);
+
+            var CurrentPlayer = playerAnswer;
+
+            if (Answer == playerAnswer)
+            {
+                Console.WriteLine("Correct!");
+            }
+            else
+            {
+                Console.WriteLine("Not correct try again :( ");
+            }
         }
     }
 }
