@@ -25,16 +25,27 @@ namespace CristinasTriviaGame1
             string playerAnswer = ReadLine();
             WriteLine("You answered " + playerAnswer);
             WriteLine("The correct answer was: " + Answer);
+            Clear();
+
 
             var CurrentPlayer = playerAnswer;
 
             if (Answer == playerAnswer)
             {
-                Console.WriteLine("Correct!");
+                ForegroundColor = ConsoleColor.Green;
+                WriteLine("Correct!");
+                ResetColor();
             }
             else
             {
-                Console.WriteLine("Not correct try again :( ");
+                ForegroundColor = ConsoleColor.Red;
+                WriteLine("Not correct try again :( ");
+                ResetColor();
+            }
+
+            var Score = Answer;
+            {
+
             }
         }
     }

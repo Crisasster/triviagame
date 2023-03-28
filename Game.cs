@@ -10,9 +10,8 @@ namespace CristinasTriviaGame1
     internal class Game
     {
         private string GameTitle = "Cristina's Trivia Game";
-        private string Description = "This Trivia game features fun facts about animals";
         private Player CurrentPlayer;
-        private Trivia pufferfishTrivia;
+        private Trivia PufferfishTrivia;
         private Trivia CatTrivia;
         private Trivia FrogTrivia;
         private Trivia MonkeyTrivia;
@@ -24,8 +23,8 @@ namespace CristinasTriviaGame1
         private Trivia AxolotlTrivia;
         public Game() 
         {
-            string pufferfishQuestion = "This spikey boi inlates when threatened. - Clownfish, Pufferfish, Shark, Ocean Sunfish";
-            pufferfishTrivia = new Trivia(pufferfishQuestion, "Pufferfish");
+            string PufferfishQuestion = "This spikey boi inlates when threatened. - Clownfish, Pufferfish, Shark, Ocean Sunfish";
+            PufferfishTrivia = new Trivia(PufferfishQuestion, "Pufferfish");
             
             string CatQuestion = "This small wildcat is native to the mountainous regions across Cental Asia. - Caracal, Tiger, Palla's Cat, Serval";
             CatTrivia = new Trivia(CatQuestion, "Palla's Cat");
@@ -66,35 +65,40 @@ namespace CristinasTriviaGame1
             WriteLine(".-(  `---'  )-.");
             WriteLine(" __\\ \\\\\\___/// /__");
             WriteLine("'-._.'/M\\ /M\\`._,-");
+            ForegroundColor = ConsoleColor.Cyan;
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             ForegroundColor = ConsoleColor.Yellow;
             WriteLine("Welcome to Cristina's Trivia Game!");
-            WriteLine("To answer, type in the answer you belive is correct from the answer list.");
+            WriteLine("To play, type in the answer you belive is correct.");
+            ForegroundColor = ConsoleColor.Cyan;
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ForegroundColor = ConsoleColor.Yellow;
             WriteLine("Press any key to begin");
             ReadKey();
             Clear();
 
-            ForegroundColor= ConsoleColor.Cyan;
+            ForegroundColor = ConsoleColor.Cyan;
             WriteLine("Hello player, What is your name? ");
             String PlayerName = ReadLine();
             CurrentPlayer = new Player(PlayerName);
             WriteLine("Hello there, " + PlayerName);
             WriteLine("Your starting score is " + CurrentPlayer.Score);
+            ResetColor();
             ReadKey();
             Clear();
 
-            ForegroundColor = ConsoleColor.Yellow;
-            pufferfishTrivia.AskQuestion();
-            CatTrivia.AskQuestion();
-            FrogTrivia.AskQuestion();
-            MonkeyTrivia.AskQuestion();
-            OtterTrivia.AskQuestion();
-            SlothTrivia.AskQuestion();
-            PenguinTrivia.AskQuestion();
-            CapybaraTrivia.AskQuestion();
-            BirdTrivia.AskQuestion();
-            AxolotlTrivia.AskQuestion();
-            
-            ReadKey();
+                PufferfishTrivia.AskQuestion();
+                CatTrivia.AskQuestion();
+                FrogTrivia.AskQuestion();
+                MonkeyTrivia.AskQuestion();
+                OtterTrivia.AskQuestion();
+                SlothTrivia.AskQuestion();
+                PenguinTrivia.AskQuestion();
+                CapybaraTrivia.AskQuestion();
+                BirdTrivia.AskQuestion();
+                AxolotlTrivia.AskQuestion();
+
+                ReadKey();
         }
     }
 }
