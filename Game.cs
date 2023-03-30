@@ -23,6 +23,7 @@ namespace CristinasTriviaGame1
         readonly private Trivia AxolotlTrivia;
         public Game() 
         {
+            //questions and answers go here
 
             string PufferfishQuestion = "This spikey boi inlates when threatened. - Clownfish, Pufferfish, Shark, Ocean Sunfish";
             PufferfishTrivia = new Trivia(PufferfishQuestion, "Pufferfish");
@@ -60,13 +61,15 @@ namespace CristinasTriviaGame1
         {
             Title = GameTitle;
 
-            //this is a frog
+            //this is the title page
+            //this is a frog lol
+
             ForegroundColor = ConsoleColor.Green;
-            WriteLine("     _e-e_  ");
-            WriteLine("    (-._.-)  ");
-            WriteLine(".-(  `---'  )-.");
-            WriteLine(" __\\ \\\\\\___/// /__");
-            WriteLine("'-._.'/M\\ /M\\`._,-");
+            WriteLine("      _e-e_  ");
+            WriteLine("     (-._.-)  ");
+            WriteLine(". -(  `---'  )-. ");
+            WriteLine("  __\\ \\\\\\___/// /__ ");
+            WriteLine("'-._.'/M\\ /M\\`._,- ");
             ForegroundColor = ConsoleColor.Cyan;
             WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
             ForegroundColor = ConsoleColor.Yellow;
@@ -78,6 +81,8 @@ namespace CristinasTriviaGame1
             WriteLine("Press any key to begin");
             ReadKey();
             Clear();
+
+            //here is where we get the player information
 
             ForegroundColor = ConsoleColor.Cyan;
             WriteLine("Hello player, What is your name? ");
@@ -91,6 +96,7 @@ namespace CristinasTriviaGame1
             ReadKey();
             Clear();
 
+            //reads the questions
 
             PufferfishTrivia.AskQuestion();
             CatTrivia.AskQuestion();
