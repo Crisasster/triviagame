@@ -15,6 +15,7 @@ namespace CristinasTriviaGame1
             {
             Name = PlayerName;
             Score = 0;
+
         }
     }
 }
