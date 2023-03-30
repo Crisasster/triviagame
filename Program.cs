@@ -30,6 +30,7 @@ namespace CristinasTriviaGame1
                 Console.WriteLine("Would you like to play again? - Yes or No ");
                 Console.ResetColor();
                 Console.ReadLine();
+                
                 currentGame.Play();
 
             }

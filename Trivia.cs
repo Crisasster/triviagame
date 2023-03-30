@@ -32,8 +32,7 @@ namespace CristinasTriviaGame1
 
             var CurrentPlayer = playerAnswer;
 
-            // Gives player right or wrong answer
-
+            // Gives player right ot wrong answer
             if  (Answer == playerAnswer)
             {
                 ForegroundColor = ConsoleColor.Green;
