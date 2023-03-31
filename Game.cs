@@ -24,38 +24,36 @@ namespace CristinasTriviaGame1
         public Game() 
         {
             //questions and answers go here
-
-            string PufferfishQuestion = "This spikey boi inlates when threatened. - Clownfish, Pufferfish, Shark, Ocean Sunfish";
+            string PufferfishQuestion = "1. This spikey boi inlates when threatened. - Clownfish, Pufferfish, Shark, Ocean Sunfish";
             PufferfishTrivia = new Trivia(PufferfishQuestion, "Pufferfish");
             
-            string CatQuestion = "This small wildcat is native to the mountainous regions across Cental Asia. - Caracal, Tiger, Palla's Cat, Serval";
+            string CatQuestion = "2. This small wildcat is native to the mountainous regions across Cental Asia. - Caracal, Tiger, Palla's Cat, Serval";
             CatTrivia = new Trivia(CatQuestion, "Palla's Cat");
 
-            string FrogQuestion = "These spicy boys are the most toxic species of frog. - Poison Dart Frog, Golden Poison Frog, Pacman Frog, Budgetts Frog";
+            string FrogQuestion = "3. These spicy boys are the most toxic species of frog. - Poison Dart Frog, Golden Poison Frog, Pacman Frog, Budgetts Frog";
             FrogTrivia = new Trivia(FrogQuestion, "Golden Poison Frog");
 
-            string MonkeyQuestion = "This small cute monkey is in the movie Madagascar. - Tamarin, Golden Lion Monkey, Galago, Spider Monkey";
+            string MonkeyQuestion = "4. This small cute monkey is in the movie Madagascar. - Tamarin, Golden Lion Monkey, Galago, Spider Monkey";
             MonkeyTrivia = new Trivia(MonkeyQuestion, "Galago");
 
-            string OtterQuestion = "These friendly animals love companionship, and often swim in pairs. - Otter, Seal, Muskrat, Dog";
+            string OtterQuestion = "5. These friendly animals love companionship, and often swim in pairs. - Otter, Seal, Muskrat, Dog";
             OtterTrivia = new Trivia(OtterQuestion, "Otter");
 
-            string SlothQuestion = "Without the help of these animals, we would not have avocados. - Bear, Sloth, Lemur, Koala";
+            string SlothQuestion = "6. Without the help of these animals, we would not have avocados. - Bear, Sloth, Lemur, Koala";
             SlothTrivia = new Trivia(SlothQuestion, "Sloth");
 
-            string PenguinQuestion = "Popular in Japanese zoos, this cowardly penguin is native to South America. - Royal, Emperor, Humbolt, Giant";
+            string PenguinQuestion = "7. Popular in Japanese zoos, this cowardly penguin is native to South America. - Royal, Emperor, Humbolt, Giant";
             PenguinTrivia = new Trivia(PenguinQuestion, "Humbolt");
 
-            string CapybaraQuestion = "The largest species of rodent, UrbanRescueRanch has two named Gort and Quandale. - Prarie Dog, Hamster, Gerbil, Capybara";
+            string CapybaraQuestion = "8. The largest species of rodent, UrbanRescueRanch has two named Gort and Quandale. - Prarie Dog, Hamster, Gerbil, Capybara";
             CapybaraTrivia = new Trivia(CapybaraQuestion, "Capybara");
 
-            string BirdQuestion = "Native to Australia, these birds are known for their calls which sounds like laughs. - Cockatoo, kookaburra, Lorikeet, Lyrebird";
+            string BirdQuestion = "9. Native to Australia, these birds are known for their calls which sounds like laughs. - Cockatoo, kookaburra, Lorikeet, Lyrebird";
             BirdTrivia = new Trivia(BirdQuestion, "Kookaburra");
 
-            string AxolotlQuestion = "This popular series of salamander does not go through metamorphosis. - Axolotl, Newt, Mole, Siren";
+            string AxolotlQuestion = "10. This popular series of salamander does not go through metamorphosis. - Axolotl, Newt, Mole, Siren";
             AxolotlTrivia = new Trivia(AxolotlQuestion, "Axolotl");
-
-
+            
         }
         public void Play()
         {
@@ -97,20 +95,60 @@ namespace CristinasTriviaGame1
             Clear();
 
             //reads the questions
+            //and displays some fun animal facts, after the player has answered.
 
             PufferfishTrivia.AskQuestion();
+            ForegroundColor= ConsoleColor.Blue;
+            WriteLine("There are more than 120 different species of pufferfish!");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             CatTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.DarkGray;
+            WriteLine("Palla's cats use their tail as a hand warmer!");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             FrogTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.DarkYellow;
+            WriteLine("The golden poison frog is thought to be the most poisonous animal on earth.");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             MonkeyTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.DarkYellow;
+            WriteLine("Galagos are also known as Bush Babies.");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             OtterTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.Cyan;
+            WriteLine("Otters lack blubber, but have water resistant fur that keeps them warm");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             SlothTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.DarkMagenta;
+            WriteLine("Despite their slow movement, sloths are actually great swimmers.");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             PenguinTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.Magenta;
+            WriteLine("Humbolt penguin can swim at speeds of 30 mph.");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             CapybaraTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.Yellow;
+            WriteLine("Capybaras can stay under water for as long as five minutes.");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             BirdTrivia.AskQuestion();
+            ForegroundColor = ConsoleColor.DarkYellow;
+            WriteLine("Kookaburras are known to be friendly towards humans.");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
             AxolotlTrivia.AskQuestion();
-
-                ReadKey();
-
+            ForegroundColor = ConsoleColor.Magenta;
+            WriteLine("Axolotls can regenerate their body parts.");
+            WriteLine("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+            ResetColor();
+            WriteLine("Press enter twice to end the game and bring up the end screen");
+            ReadKey();
             }
         }
     }

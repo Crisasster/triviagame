@@ -9,18 +9,15 @@ namespace CristinasTriviaGame1
             Game currentGame = new Game();
             currentGame.Play();
 
-            //loop goes here
-
             bool keepPlaying = true;
             while (keepPlaying)
             {
-
                 keepPlaying = Console.ReadKey().Key.ToString().ToUpper().Equals("Yes");
 
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
-                Console.WriteLine("        ^-----^   ");
-                Console.WriteLine("      _.| o o | _   ) ) ");
-                Console.WriteLine("    -(((---(((--------  ");
+                Console.WriteLine("       ^-----^    ( ) ");
+                Console.WriteLine("      =| n n | =  ) ) ");
+                Console.WriteLine("   ---(((---(((--------  ");
                 Console.ResetColor();
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Thank you for playing!");
@@ -29,6 +26,7 @@ namespace CristinasTriviaGame1
                 Console.WriteLine("Would you like to play again? - Yes or No ");
                 Console.ResetColor();
                 Console.ReadLine();
+                Console.Clear();
 
                 currentGame.Play();
             }

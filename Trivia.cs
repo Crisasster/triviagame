@@ -17,7 +17,6 @@ namespace CristinasTriviaGame1
             Question = triviaQuestion;
             Answer = triviaAnswer;
         }
-
         public void AskQuestion()
         {
             //this will display the questions
@@ -51,7 +50,7 @@ namespace CristinasTriviaGame1
                 ResetColor();
             }
 
-            //makes the next answer appear if the play answers wrong
+            //makes the next question appear if the play answers wrong
             while (wrongAnswer)
             {
                 Write( Answer + playerAnswer);
@@ -59,7 +58,6 @@ namespace CristinasTriviaGame1
                 if (Answer == playerAnswer)
                 { 
                 }
-
                 ReadKey();
             }
         }
