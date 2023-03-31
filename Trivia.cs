@@ -11,7 +11,6 @@ namespace CristinasTriviaGame1
     {
         private string Question;
         private string Answer;
-        public int score;
 
         public Trivia(string triviaQuestion, string triviaAnswer)
         {
@@ -30,13 +29,13 @@ namespace CristinasTriviaGame1
             bool wrongAnswer = false;
             Clear();
 
+            //Gives player right or wrong answer
+
             var CurrentPlayer = playerAnswer;
 
-            // Gives player right ot wrong answer
             if  (Answer == playerAnswer)
             {
                 ForegroundColor = ConsoleColor.Green;
-                score = +1;
                 WriteLine("You answered " + playerAnswer);
                 WriteLine("Correct!");
                 ResetColor();
@@ -46,12 +45,13 @@ namespace CristinasTriviaGame1
                 
                 ForegroundColor = ConsoleColor.Red;
                 wrongAnswer = false;
-                score = -1;
                 WriteLine("You answered " + playerAnswer);
                 WriteLine("Sorry, The correct answer was: " + Answer);
                 WriteLine(":( ");
                 ResetColor();
             }
+
+            //makes the next answer appear if the play answers wrong
             while (wrongAnswer)
             {
                 Write( Answer + playerAnswer);

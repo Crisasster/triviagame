@@ -15,7 +15,6 @@ namespace CristinasTriviaGame1
             while (keepPlaying)
             {
 
-
                 keepPlaying = Console.ReadKey().Key.ToString().ToUpper().Equals("Yes");
 
                 Console.ForegroundColor = ConsoleColor.DarkYellow;
@@ -30,10 +29,10 @@ namespace CristinasTriviaGame1
                 Console.WriteLine("Would you like to play again? - Yes or No ");
                 Console.ResetColor();
                 Console.ReadLine();
-                
-                currentGame.Play();
 
+                currentGame.Play();
             }
         }
     }
 }
+

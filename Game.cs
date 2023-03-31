@@ -91,7 +91,7 @@ namespace CristinasTriviaGame1
             CurrentPlayer = new Player(PlayerName);
             WriteLine("Hello there, " + PlayerName);
             ForegroundColor = ConsoleColor.DarkBlue;
-            WriteLine("Your starting score is " + CurrentPlayer.Score);
+            WriteLine("I hope you enjoy my Trivia Game.");
             ResetColor();
             ReadKey();
             Clear();
